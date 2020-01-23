@@ -1,4 +1,5 @@
 <script>
+  import { Link } from "svelte-routing";
   import { onMount } from "svelte";
 
   onMount(() => {
@@ -24,26 +25,67 @@
     border-bottom: 1px solid rgba(255, 62, 0, 0.1);
     padding: 0 1em;
   }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+  }
+
+  nav :global(a) {
+    color: #fd3b1c;
+  }
+
+  nav :global(a:hover) {
+    text-decoration: none;
+    color: #fd3a1ca6;
+  }
+
+  .navbar-brand {
+    align-items: center;
+  }
+
+  .navbar-start {
+    margin-left: 0.8rem;
+    padding-top: 0.5rem;
+  }
 </style>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
+    <Link to="/">
       <img
         src="https://bulma.io/images/bulma-logo.png"
-        alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
         width="112"
-        height="28" />
-    </a>
+        height="28"
+        alt="Bulma Logo" />
+    </Link>
 
     <span
       role="button"
-      class="navbar-burger"
+      class="navbar-burger burger"
       aria-label="menu"
-      aria-expanded="false">
+      aria-expanded="false"
+      data-target="navbarBasicExample">
       <span aria-hidden="true" />
       <span aria-hidden="true" />
       <span aria-hidden="true" />
     </span>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <ul>
+        <li class="navbar-item">
+          <Link to="/">Home</Link>
+        </li>
+        <li class="navbar-item">
+          <Link to="/about">About</Link>
+        </li>
+
+      </ul>
+    </div>
   </div>
 </nav>
