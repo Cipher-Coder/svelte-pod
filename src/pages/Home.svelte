@@ -10,16 +10,57 @@
 </script>
 
 <style>
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 25px 20px;
+  }
+
   h3 {
-    font-size: 22px;
-    margin: 5px 25px;
+    font-size: 1.25rem;
+    margin: 20px 10px;
+  }
+
+  .focus-in-expand {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
 </style>
 
+<svelte:head>
+  <title>Home | Top Podcasts</title>
+</svelte:head>
+
 <div class="row">
-
-  <h3>Best Developer Podcasts:</h3>
-
+  <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
   {#each posts as post}
     <div class="col s6">
       <div class="card">
@@ -35,14 +76,11 @@
           <div class="media-content">
             <p class="title is-5">{post.name}</p>
           </div>
-
         </div>
       </div>
     </div>
   {:else}
     <p>No posts</p>
   {/each}
-
-  <h3>More Coming!!!</h3>
-
+  <h3>More to Come!!!</h3>
 </div>

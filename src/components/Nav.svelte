@@ -49,18 +49,14 @@
 
   .navbar-start {
     margin-left: 0.8rem;
-    padding-top: 0.5rem;
+    padding-top: 0.7rem;
   }
 </style>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <Link to="/">
-      <img
-        src="https://bulma.io/images/bulma-logo.png"
-        width="112"
-        height="28"
-        alt="Bulma Logo" />
+      <img src="images/fullLogo.png" width="142" height="38" alt="Bulma Logo" />
     </Link>
 
     <span
