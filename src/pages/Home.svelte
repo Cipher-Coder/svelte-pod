@@ -22,9 +22,9 @@
   }
 
   .focus-in-expand {
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       both;
-    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   @-webkit-keyframes focus-in-expand {
@@ -58,29 +58,30 @@
 <svelte:head>
   <title>Home | Top Podcasts</title>
 </svelte:head>
+<div class="container">
+  <div class="row">
+    <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
+    {#each posts as post}
+      <div class="col s6">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is48x48">
+                  <img src={post.image} alt="Album Cover" />
+                </figure>
 
-<div class="row">
-  <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
-  {#each posts as post}
-    <div class="col s6">
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is48x48">
-                <img src={post.image} alt="Album Cover" />
-              </figure>
-
+              </div>
             </div>
-          </div>
-          <div class="media-content">
-            <p class="title is-5">{post.name}</p>
+            <div class="media-content">
+              <p class="title is-5">{post.name}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  {:else}
-    <p>No posts</p>
-  {/each}
-  <h3>More to Come!!!</h3>
+    {:else}
+      <p>No posts</p>
+    {/each}
+    <h3>More to Come!!!</h3>
+  </div>
 </div>

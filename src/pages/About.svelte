@@ -1,5 +1,10 @@
 <script>
-
+  import Image from "../components/Image.svelte";
+  let myImage = {
+    src: "images/audioBoard.jpg",
+    alt: "Audio Board",
+    className: "pic"
+  };
 </script>
 
 <style>
@@ -33,10 +38,6 @@
     line-height: 1.2rem;
   }
 
-  .is-centered {
-    text-align: center;
-  }
-
   .projects {
     margin: 45px 0;
   }
@@ -58,61 +59,68 @@
     margin-left: 15px;
     font-size: 1.2rem;
   }
+
+  .addedPic {
+    max-width: 600px;
+  }
 </style>
 
 <svelte:head>
   <title>About | Top Podcasts</title>
 </svelte:head>
-
-<div class="container intro">
-  <div class="columns">
-    <div class="column">
-      <img
-        class="microphone"
-        src="images/microphone1.jpg"
-        alt="Professional microphone" />
+<div class="container">
+  <div class="container intro">
+    <div class="columns">
+      <div class="column">
+        <img
+          class="microphone"
+          src="images/microphone1.jpg"
+          alt="Professional microphone" />
+      </div>
+      <div class="column">
+        <h1 class="has-text-centered">About Developer Podcasts</h1>
+        <p class="writing">
+          Podcasts have become a cultural phenomenon! They can inform, teach,
+          entertain, and much much more! Everyone loves them, including me!
+        </p>
+        <p class="writing">
+          The problem I encountered was there was no where I could go and just
+          type in "Developer Podcasts" and find them. Not just find them but
+          find the good ones. I searched and searched. Made my own list... but
+          then I had to spend the time listeneing to every single one, just to
+          find out which one was good. This has taken hours and I am still
+          finding more and more that I want to try out.
+        </p>
+        <p class="writing">
+          The solution... Developer Podcasts. Here you can submit podcasts that
+          you like, have listened to, and enjoyed. The community can rank them
+          so when anyone looks at the page they know immediately which podcasts
+          are great.
+        </p>
+      </div>
     </div>
-    <div class="column">
-      <h1 class="is-centered">About Developer Podcasts</h1>
-      <p class="writing">
-        Podcasts have become a cultural phenomenon! They can inform, teach,
-        entertain, and much much more! Everyone loves them, including me!
-      </p>
-      <p class="writing">
-        The problem I encountered was there was no where I could go and just
-        type in "Developer Podcasts" and find them. Not just find them but find
-        the good ones. I searched and searched. Made my own list... but then I
-        had to spend the time listeneing to every single one, just to find out
-        which one was good. This has taken hours and I am still finding more and
-        more that I want to try out.
-      </p>
-      <p class="writing">
-        The solution... Developer Podcasts. Here you can submit podcasts that
-        you like, have listened to, and enjoyed. The community can rank them so
-        when anyone looks at the page they know immediately which podcasts are
-        great.
-      </p>
+    <div class="container projects">
+      <h2 class="has-text-centered">Check out some of my other projects:</h2>
+    </div>
+    <div class="devtabs columns">
+      <figure class="figure-container">
+        <img
+          class="devtabs-img column"
+          src="images/devtabs.png"
+          alt="Screenshot of Dev Tabs" />
+        <figcaption class="caption">
+          <a
+            href="https://mattaz.com/devtabs"
+            target="_blank"
+            rel="noopener noreferrer">
+            Dev Tabs Browser Extension
+          </a>
+        </figcaption>
+      </figure>
     </div>
   </div>
-  <div class="container projects is-centered">
-    <h2>Check out some of my other projects:</h2>
-  </div>
-  <div class="devtabs columns">
-    <figure class="figure-container">
-      <img
-        class="devtabs-img column"
-        src="images/devtabs.png"
-        alt="Screenshot of Dev Tabs" />
-      <figcaption class="caption">
-        <a
-          href="https://mattaz.com/devtabs"
-          target="_blank"
-          rel="noopener noreferrer">
-          Dev Tabs Browser Extension
-        </a>
-      </figcaption>
-    </figure>
-
+  <div class="addedPic">
+    <Image {...myImage} />
   </div>
 
 </div>
