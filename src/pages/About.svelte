@@ -66,7 +66,7 @@
 </style>
 
 <svelte:head>
-  <title>About | Top Podcasts</title>
+  <title>About | Rank Pods</title>
 </svelte:head>
 <div class="container">
   <div class="container intro">

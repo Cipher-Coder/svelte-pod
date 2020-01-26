@@ -51,6 +51,11 @@
     margin-left: 0.8rem;
     padding-top: 0.7rem;
   }
+
+  .navbar-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+  }
 </style>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -80,7 +85,16 @@
         <li class="navbar-item">
           <Link to="/about">About</Link>
         </li>
-
+        <li class="navbar-item has-dropdown is-hoverable">
+          <Link class="navbar-link dropdown-trigger">Catagories &dtrif;</Link>
+          <div class="navbar-dropdown">
+            <Link to="#" class="navbar-item dropdown-item">General</Link>
+            <Link to="#" class="navbar-item dropdown-item">Political</Link>
+            <Link to="#" class="navbar-item dropdown-item">Comedy</Link>
+            <hr class="navbar-divider" />
+            <Link to="#" class="navbar-item dropdown-item">Developer</Link>
+          </div>
+        </li>
       </ul>
     </div>
   </div>

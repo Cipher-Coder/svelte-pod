@@ -56,11 +56,11 @@
 </style>
 
 <svelte:head>
-  <title>Home | Top Podcasts</title>
+  <title>Home | Rank Pods</title>
 </svelte:head>
 <div class="container">
   <div class="row">
-    <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
+    <h1 class="focus-in-expand">Rank The Best Podcasts:</h1>
     {#each posts as post}
       <div class="col s6">
         <div class="card">
