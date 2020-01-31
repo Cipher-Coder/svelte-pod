@@ -53,8 +53,16 @@
   }
 
   .navbar-dropdown {
-    padding: 10px;
+    padding: 15px;
     font-size: 1rem;
+  }
+
+  .navbar-dropdown :global(a) {
+    padding: 18px;
+  }
+
+  .d-link {
+    padding-left: 8px !important;
   }
 </style>
 
@@ -86,13 +94,21 @@
           <Link to="/about">About</Link>
         </li>
         <li class="navbar-item has-dropdown is-hoverable">
-          <Link class="navbar-link dropdown-trigger">Catagories &dtrif;</Link>
+          <Link>Catagories &dtrif;</Link>
           <div class="navbar-dropdown">
-            <Link to="#" class="navbar-item dropdown-item">General</Link>
-            <Link to="#" class="navbar-item dropdown-item">Political</Link>
-            <Link to="#" class="navbar-item dropdown-item">Comedy</Link>
+            <Link to="#">
+              <span class="d-link">General</span>
+            </Link>
+            <Link to="#">
+              <span class="d-link">Political</span>
+            </Link>
+            <Link to="#">
+              <span class="d-link">Comedy</span>
+            </Link>
             <hr class="navbar-divider" />
-            <Link to="#" class="navbar-item dropdown-item">Developer</Link>
+            <Link to="#">
+              <span class="d-link">Developer</span>
+            </Link>
           </div>
         </li>
       </ul>
