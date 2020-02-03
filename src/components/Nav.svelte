@@ -113,5 +113,15 @@
         </li>
       </ul>
     </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <button id="sign-up-button" class="button is-primary">
+            <strong>Sign up</strong>
+          </button>
+          <button id="login-button" class="button is-dark">Log in</button>
+        </div>
+      </div>
+    </div>
   </div>
 </nav>

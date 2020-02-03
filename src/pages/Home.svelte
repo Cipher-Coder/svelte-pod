@@ -1,4 +1,5 @@
 <script>
+  import VoteButton from "../components/VoteButton.svelte";
   let posts = [];
 
   (async () => {
@@ -53,6 +54,12 @@
       opacity: 1;
     }
   }
+
+  .media-right {
+    float: right;
+    margin-top: -70px;
+    margin-right: 45px;
+  }
 </style>
 
 <svelte:head>
@@ -62,7 +69,7 @@
   <div class="row">
     <h1 class="focus-in-expand">Rank The Best Podcasts:</h1>
     {#each posts as post}
-      <div class="col s6">
+      <div class="column is-two-thirds s6">
         <div class="card">
           <div class="card-content">
             <div class="media">
@@ -70,11 +77,13 @@
                 <figure class="image is48x48">
                   <img src={post.image} alt="Album Cover" />
                 </figure>
-
               </div>
             </div>
             <div class="media-content">
               <p class="title is-5">{post.name}</p>
+            </div>
+            <div class="media-right">
+              <VoteButton />
             </div>
           </div>
         </div>
