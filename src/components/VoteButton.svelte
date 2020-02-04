@@ -1,8 +1,8 @@
 <script>
-  export let count = 0;
+  export let count = 0
 
   function handleVote() {
-    count += 1;
+    count += 1
   }
 </script>
 

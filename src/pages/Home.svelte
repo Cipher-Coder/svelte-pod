@@ -1,13 +1,13 @@
 <script>
-  import VoteButton from "../components/VoteButton.svelte";
-  let posts = [];
+  import VoteButton from '../components/VoteButton.svelte'
+  let posts = []
 
-  (async () => {
+  ;(async () => {
     const res = await fetch(
-      "https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/podcasts"
-    );
-    posts = (await res.json()).podcasts;
-  })();
+      'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/podcasts',
+    )
+    posts = (await res.json()).podcasts
+  })()
 </script>
 
 <style>

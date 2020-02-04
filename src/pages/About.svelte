@@ -1,25 +1,21 @@
 <script>
-  import Image from "../components/Image.svelte";
+  import Image from '../components/Image.svelte'
   let myImage = {
-    src: "images/audioBoard.jpg",
-    alt: "Audio Board",
-    className: "pic"
-  };
+    src: 'images/audioBoard.jpg',
+    alt: 'Audio Board',
+    className: 'pic',
+  }
+
+  let microphone = {
+    src: 'images/microphone1.jpg',
+    alt: 'Professional Microphone',
+    className: 'microphone',
+  }
 </script>
 
 <style>
   .intro {
     margin: 45px 0;
-  }
-
-  .microphone {
-    border-radius: 6px;
-    -webkit-box-shadow: rgba(26, 26, 67, 0.05) 1px 1px 5px 0px,
-      rgba(50, 50, 93, 0.5) -39px 62.5px 125px -25px,
-      rgba(0, 0, 0, 0.3) 23.4px 37.5px 75px -37.5px;
-    box-shadow: rgba(26, 26, 67, 0.05) 1px 1px 5px 0px,
-      rgba(50, 50, 93, 0.5) -39px 62.5px 125px -25px,
-      rgba(0, 0, 0, 0.3) 23.4px 37.5px 75px -37.5px;
   }
 
   h1 {
@@ -62,6 +58,8 @@
 
   .addedPic {
     max-width: 600px;
+    text-align: center;
+    margin: 40px auto 60px;
   }
 </style>
 
@@ -72,28 +70,25 @@
   <div class="container intro">
     <div class="columns">
       <div class="column">
-        <img
-          class="microphone"
-          src="images/microphone1.jpg"
-          alt="Professional microphone" />
+        <Image {...microphone} />
       </div>
       <div class="column">
-        <h1 class="has-text-centered">About Developer Podcasts</h1>
+        <h1 class="has-text-centered">About Dev Pods</h1>
         <p class="writing">
           Podcasts have become a cultural phenomenon! They can inform, teach,
           entertain, and much much more! Everyone loves them, including me!
         </p>
         <p class="writing">
           The problem I encountered was there was no where I could go and just
-          type in "Developer Podcasts" and find them. Not just find them but
+          type in "Developer Podcasts" and find them. Not just find them, but
           find the good ones. I searched and searched. Made my own list... but
           then I had to spend the time listeneing to every single one, just to
           find out which one was good. This has taken hours and I am still
           finding more and more that I want to try out.
         </p>
         <p class="writing">
-          The solution... Developer Podcasts. Here you can submit podcasts that
-          you like, have listened to, and enjoyed. The community can rank them
+          The solution... Dev Pods. Here you can submit podcasts that you like,
+          have listened to, and want to recommend. The community can rank them
           so when anyone looks at the page they know immediately which podcasts
           are great.
         </p>

@@ -1,23 +1,23 @@
 <script>
-  import { Link } from "svelte-routing";
-  import { onMount } from "svelte";
+  import { Link } from 'svelte-routing'
+  import { onMount } from 'svelte'
 
   onMount(() => {
     const navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll(".navbar-burger"),
-      0
-    );
+      document.querySelectorAll('.navbar-burger'),
+      0,
+    )
 
     if (navbarBurgers.length > 0) {
       navbarBurgers.forEach(el => {
-        const target = el.dataset.target;
-        const target2 = document.getElementById(target);
+        const target = el.dataset.target
+        const target2 = document.getElementById(target)
 
-        el.classList.toggle("is-active");
-        target2.classList.toggle("is-active");
-      });
+        el.classList.toggle('is-active')
+        target2.classList.toggle('is-active')
+      })
     }
-  });
+  })
 </script>
 
 <style>

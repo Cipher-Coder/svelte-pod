@@ -1,12 +1,12 @@
 <script>
-  import "../node_modules/bulma/css/bulma.min.css";
-  import Nav from "./components/Nav.svelte";
-  import Footer from "./components/Footer.svelte";
-  import { Router, Route } from "svelte-routing";
-  import Home from "./pages/Home.svelte";
-  import About from "./pages/About.svelte";
+  import '../node_modules/bulma/css/bulma.min.css'
+  import Nav from './components/Nav.svelte'
+  import Footer from './components/Footer.svelte'
+  import { Router, Route } from 'svelte-routing'
+  import Home from './pages/Home.svelte'
+  import About from './pages/About.svelte'
 
-  export let url = "";
+  export let url = ''
 </script>
 
 <style>
