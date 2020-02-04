@@ -68,7 +68,7 @@
 </svelte:head>
 <div class="container">
   <div class="container intro">
-    <div class="columns">
+    <div class="columns is-vcentered">
       <div class="column">
         <Image {...microphone} />
       </div>

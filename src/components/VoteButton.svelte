@@ -13,5 +13,5 @@
   }
 </style>
 
-<button on:click={handleVote} class="button is-dark">&#x25B2;</button>
+<button on:click={handleVote} class="button is-white">&#128077;</button>
 <p class="ranking-p">Votes: {count}</p>

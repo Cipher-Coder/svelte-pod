@@ -1,7 +1,8 @@
 <script>
   import VoteButton from '../components/VoteButton.svelte'
-  let posts = []
+  import SubmitForm from '../components/SubmitForm.svelte'
 
+  let posts = []
   ;(async () => {
     const res = await fetch(
       'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/podcasts',
@@ -60,14 +61,31 @@
     margin-top: -70px;
     margin-right: 45px;
   }
+
+  .is-right {
+    float: right;
+    padding-left: 75px;
+  }
+
+  .submit-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
 </style>
 
 <svelte:head>
   <title>Home | Rank Pods</title>
 </svelte:head>
 <div class="container">
-  <div class="row">
-    <h1 class="focus-in-expand">Rank The Best Podcasts:</h1>
+
+  <h1 class="focus-in-expand">Rank The Best Podcasts:</h1>
+  <div class="container">
+    <div class="column is-one-third is-right">
+      <div class="row">
+        <h2 class="submit-title">Submit An Awesome Podcast!</h2>
+        <SubmitForm />
+      </div>
+    </div>
     {#each posts as post}
       <div class="column is-two-thirds s6">
         <div class="card">
@@ -91,6 +109,9 @@
     {:else}
       <p>No posts</p>
     {/each}
-    <h3>More to Come!!!</h3>
+
   </div>
+
+  <h3>More to Come!!!</h3>
+
 </div>
