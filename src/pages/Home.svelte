@@ -1,6 +1,7 @@
 <script>
   import VoteButton from '../components/VoteButton.svelte'
   import SubmitForm from '../components/SubmitForm.svelte'
+  import PodSearch from '../components/PodSearch.svelte'
 
   let posts = []
   ;(async () => {
@@ -84,6 +85,10 @@
       <div class="row">
         <h2 class="submit-title">Submit An Awesome Podcast!</h2>
         <SubmitForm />
+      </div>
+      <div class="row">
+        <h2 class="submit-title">Search for Podcast</h2>
+        <PodSearch />
       </div>
     </div>
     {#each posts as post}
