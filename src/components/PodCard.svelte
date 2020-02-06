@@ -1,0 +1,34 @@
+<script>
+  import VoteButton from '../components/VoteButton.svelte'
+  export let src
+  export let name
+  export let alt
+</script>
+
+<style>
+  .media-right {
+    float: right;
+    margin-top: -70px;
+    margin-right: 45px;
+  }
+</style>
+
+<div class="column is-two-thirds s6">
+  <div class="card">
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is48x48">
+            <img {src} {alt} />
+          </figure>
+        </div>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">{name}</p>
+      </div>
+      <div class="media-right">
+        <VoteButton />
+      </div>
+    </div>
+  </div>
+</div>

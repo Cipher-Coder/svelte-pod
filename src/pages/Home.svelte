@@ -1,5 +1,5 @@
 <script>
-  import VoteButton from '../components/VoteButton.svelte'
+  import PodCard from '../components/PodCard.svelte'
   import SubmitForm from '../components/SubmitForm.svelte'
   import PodSearch from '../components/PodSearch.svelte'
 
@@ -20,8 +20,13 @@
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     margin: 20px 10px;
+  }
+
+  .sorry-msg {
+    font-size: 1.2rem;
+    color: orangered;
   }
 
   .focus-in-expand {
@@ -57,20 +62,9 @@
     }
   }
 
-  .media-right {
-    float: right;
-    margin-top: -70px;
-    margin-right: 45px;
-  }
-
   .is-right {
     float: right;
     padding-left: 75px;
-  }
-
-  .submit-title {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
   }
 </style>
 
@@ -83,40 +77,25 @@
   <div class="container">
     <div class="column is-one-third is-right">
       <div class="row">
-        <h2 class="submit-title">Submit An Awesome Podcast!</h2>
         <SubmitForm />
       </div>
       <div class="row">
-        <h2 class="submit-title">Search for Podcast</h2>
         <PodSearch />
       </div>
     </div>
     {#each posts as post}
-      <div class="column is-two-thirds s6">
-        <div class="card">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is48x48">
-                  <img src={post.image} alt="Album Cover" />
-                </figure>
-              </div>
-            </div>
-            <div class="media-content">
-              <p class="title is-5">{post.name}</p>
-            </div>
-            <div class="media-right">
-              <VoteButton />
-            </div>
-          </div>
-        </div>
-      </div>
+      <PodCard src={post.image} name={post.name} alt={post.name} />
     {:else}
-      <p>No posts</p>
+      <p class="sorry-msg">
+        Sorry... No Podcasts to display! Please add one with the Submit form!
+      </p>
     {/each}
 
   </div>
 
-  <h3>More to Come!!!</h3>
+  <h3>
+    Your favorite podcast not here? Use the Submit form at the top and see what
+    others think about your favs!!
+  </h3>
 
 </div>

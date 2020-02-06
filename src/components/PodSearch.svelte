@@ -1,6 +1,4 @@
 <script>
-  import { onMount } from 'svelte'
-
   let searchParam = ''
   let baseurl = `https://itunes.apple.com`
 
@@ -20,22 +18,27 @@
         console.error('Error:', error)
       })
   }
-
-  onMount(() => {})
 </script>
 
 <style>
-  /* your styles go here */
+  .submit-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
 </style>
 
-<form on:submit|preventDefault={searchForPodcast}>
-  <label for="name">Search:</label>
-  <input bind:value={searchParam} id="search" type="text" />
+<article>
+  <h2 class="submit-title">Search for Podcast</h2>
+  <form on:submit|preventDefault={searchForPodcast}>
+    <label for="name">Search:</label>
+    <input bind:value={searchParam} id="search" type="text" />
 
-  <button type="submit" id="searchbutton">Submit</button>
-</form>
-<div id="search-results">
+    <button type="submit" id="searchbutton">Submit</button>
+  </form>
+  <div id="search-results">
 
-  <p>{searchParam}</p>
+    <p>{searchParam}</p>
 
-</div>
+  </div>
+
+</article>

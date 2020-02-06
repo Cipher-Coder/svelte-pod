@@ -24,13 +24,22 @@
 </script>
 
 <style>
+  article {
+    margin-bottom: 35px;
+  }
   .form-error {
     font-size: 1.1rem;
     color: red;
   }
+
+  .submit-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
 </style>
 
-<div class="container">
+<article class="container">
+  <h2 class="submit-title">Submit An Awesome Podcast!</h2>
   <form
     id="podcast-submission"
     class="submit-podcast"
@@ -51,4 +60,4 @@
 
   </form>
 
-</div>
+</article>
