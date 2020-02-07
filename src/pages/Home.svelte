@@ -1,15 +1,18 @@
 <script>
+  import { onMount } from 'svelte'
   import PodCard from '../components/PodCard.svelte'
   import SubmitForm from '../components/SubmitForm.svelte'
   import PodSearch from '../components/PodSearch.svelte'
 
+  const URL =
+    'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/podcasts'
   let posts = []
-  ;(async () => {
-    const res = await fetch(
-      'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/podcasts',
-    )
-    posts = (await res.json()).podcasts
-  })()
+
+  onMount(async function() {
+    const res = await fetch(URL)
+    const json = await res.json()
+    posts = json['podcasts']
+  })
 </script>
 
 <style>
