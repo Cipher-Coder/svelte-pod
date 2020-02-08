@@ -1,4 +1,5 @@
 <script>
+  import SearchResults from '../components/SearchResults.svelte'
   let searchParam = ''
   let baseurl = `https://itunes.apple.com`
   let url
@@ -44,7 +45,9 @@
     <label for="name">Search:</label>
     <input bind:value={searchParam} id="search" type="text" />
 
-    <button type="submit" id="searchbutton">Submit</button>
+    <button type="submit" class="button is-primary" id="searchbutton">
+      Search
+    </button>
   </form>
   <div>
     {#if result === undefined}
@@ -57,7 +60,10 @@
         <h4>Results:</h4>
         <ul>
           {#each searchResult as searchResults}
-            <li>{searchResults.artistName}</li>
+            <SearchResults
+              name={searchResults.artistName}
+              title={searchResults.collectionName}
+              feedURL={searchResults.feedURL} />
           {/each}
         </ul>
       {:catch error}
