@@ -34,8 +34,9 @@
   }
 
   h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    margin-bottom: 10px;
   }
 </style>
 
@@ -44,7 +45,7 @@
   <form on:submit|preventDefault={submissionHandler}>
     <label for="name">Search:</label>
     <input bind:value={searchParam} id="search" type="text" />
-
+    <br />
     <button type="submit" class="button is-primary" id="searchbutton">
       Search
     </button>
@@ -61,9 +62,9 @@
         <ul>
           {#each searchResult as searchResults}
             <SearchResults
-              name={searchResults.artistName}
+              artist={searchResults.artistName}
               title={searchResults.collectionName}
-              feedURL={searchResults.feedURL} />
+              feedURL={searchResults.feedUrl} />
           {/each}
         </ul>
       {:catch error}
