@@ -7,17 +7,17 @@
     display: block;
     text-align: center;
     padding: 0.9rem;
-    background-color: #333;
+    background-color: #9624c4;
     color: #d1d1d1;
     font-size: 0.75rem;
   }
 
   a:hover {
-    color: #b82c16;
+    color: #cca214;
   }
 
   a {
-    color: #fd3b1c;
+    color: #ffe640;
   }
 </style>
 

@@ -35,12 +35,12 @@
   }
 
   nav :global(a) {
-    color: #fd3b1c;
+    color: #9624c4;
   }
 
   nav :global(a:hover) {
     text-decoration: none;
-    color: #fd3a1ca6;
+    color: #e78200;
   }
 
   .navbar-brand {
@@ -69,7 +69,11 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <Link to="/">
-      <img src="images/fullLogo.png" width="142" height="38" alt="Bulma Logo" />
+      <img
+        src="images/newLogoSideWays.png"
+        width="142"
+        height="38"
+        alt="RankCasts Logo" />
     </Link>
 
     <span

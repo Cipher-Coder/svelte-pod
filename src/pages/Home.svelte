@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import PodCard from '../components/PodCard.svelte'
+  import VoteButton from '../components/VoteButton.svelte'
   import SubmitForm from '../components/SubmitForm.svelte'
   import PodSearch from '../components/PodSearch.svelte'
 
@@ -72,7 +73,7 @@
 </style>
 
 <svelte:head>
-  <title>Home | Rank Pods</title>
+  <title>Home | RankCasts</title>
 </svelte:head>
 <div class="container">
 
@@ -87,7 +88,9 @@
       </div>
     </div>
     {#each posts as post}
-      <PodCard src={post.image} name={post.name} alt={post.name} />
+      <PodCard src={post.image} name={post.name} alt={post.name}>
+        <VoteButton count={post.likes} />
+      </PodCard>
     {:else}
       <p class="sorry-msg">
         Sorry... No Podcasts to display! Please add one with the Submit form!

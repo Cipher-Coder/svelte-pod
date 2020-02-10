@@ -64,7 +64,7 @@
 </style>
 
 <svelte:head>
-  <title>About | Rank Pods</title>
+  <title>About | RankCasts</title>
 </svelte:head>
 <div class="container">
   <div class="container intro">

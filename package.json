@@ -2,7 +2,7 @@
   "name": "svelte-pod",
   "version": "1.0.0",
   "author": "Matthew Rebehn <matthew@mattaz.com>",
-  "description": "rankpods - website to rank your favorite podcasts",
+  "description": "Rankcasts - website to rank your favorite podcasts",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",

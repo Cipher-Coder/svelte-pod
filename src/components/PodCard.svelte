@@ -1,5 +1,4 @@
 <script>
-  import VoteButton from '../components/VoteButton.svelte'
   export let src
   export let name
   export let alt
@@ -27,7 +26,7 @@
         <p class="title is-5">{name}</p>
       </div>
       <div class="media-right">
-        <VoteButton />
+        <slot />
       </div>
     </div>
   </div>
