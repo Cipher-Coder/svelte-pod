@@ -40,7 +40,7 @@
 
   nav :global(a:hover) {
     text-decoration: none;
-    color: #e78200;
+    color: #ccb20c;
   }
 
   .navbar-brand {
