@@ -5,6 +5,8 @@
   import { Router, Route } from 'svelte-routing'
   import Home from './pages/Home.svelte'
   import About from './pages/About.svelte'
+  import Comedy from './pages/Comedy.svelte'
+  import Politics from './pages/Politics.svelte'
 
   export let url = ''
 </script>
@@ -18,6 +20,8 @@
   <div class="container">
     <Route path="/" component={Home} />
     <Route path="/about" component={About} />
+    <Route path="/comedy" component={Comedy} />
+    <Route path="/politics" component={Politics} />
   </div>
 
 </Router>

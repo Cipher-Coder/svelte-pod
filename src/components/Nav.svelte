@@ -103,10 +103,10 @@
             <Link to="#">
               <span class="d-link">General</span>
             </Link>
-            <Link to="#">
+            <Link to="/politics">
               <span class="d-link">Political</span>
             </Link>
-            <Link to="#">
+            <Link to="/comedy">
               <span class="d-link">Comedy</span>
             </Link>
             <hr class="navbar-divider" />

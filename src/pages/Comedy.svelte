@@ -7,13 +7,13 @@
   import AudioPlayer from '../components/AudioPlayer.svelte'
 
   const URL =
-    'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/developer'
+    'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/comedy'
   let posts = []
 
   onMount(async function() {
     const res = await fetch(URL)
     const json = await res.json()
-    posts = json['developer']
+    posts = json['comedy']
   })
 </script>
 
@@ -74,11 +74,12 @@
 </style>
 
 <svelte:head>
-  <title>Home | RankCasts</title>
+  <title>Comedy | RankCasts</title>
 </svelte:head>
+
 <div class="container">
 
-  <h1 class="focus-in-expand">Rank The Best Podcasts:</h1>
+  <h1 class="focus-in-expand">Rank The Best Comedy Podcasts:</h1>
   <div class="container">
     <div class="column is-one-third is-right">
       <div class="row">
