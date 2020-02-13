@@ -38,6 +38,21 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
+
+  button {
+    background-color: #9624c4;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  button:hover {
+    background-color: #712391e1;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 1rem;
+  }
 </style>
 
 <article>
@@ -46,9 +61,7 @@
     <label for="name">Search:</label>
     <input bind:value={searchParam} id="search" type="text" />
     <br />
-    <button type="submit" class="button is-primary" id="searchbutton">
-      Search
-    </button>
+    <button type="submit" class="button" id="searchbutton">Search</button>
   </form>
   <div>
     {#if result === undefined}

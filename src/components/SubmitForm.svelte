@@ -36,6 +36,21 @@
     font-size: 1.5rem;
     margin-bottom: 15px;
   }
+
+  button {
+    background-color: #9624c4;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  button:hover {
+    background-color: #712391e1;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 1rem;
+  }
 </style>
 
 <article class="container">
@@ -56,7 +71,7 @@
       <h2 class="form-error">Error!! Check your submission!</h2>
     {/if}
 
-    <button class="button is-primary" type="submit">Submit</button>
+    <button class="button" type="submit">Submit</button>
 
   </form>
 

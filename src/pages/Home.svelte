@@ -91,8 +91,7 @@
     {#each posts as post}
       <PodCard src={post.image} name={post.name} alt={post.name}>
         <span slot="audio">
-          <AudioPlayer
-            audioSrc="http://soundbible.com/mp3/Silly_Farts-Joe-1473367952.mp3" />
+          <AudioPlayer audioSrc="./sample.mp3" />
         </span>
         <span slot="vote">
           <VoteButton count={post.likes} />

@@ -43,6 +43,21 @@
     color: #ccb20c;
   }
 
+  .is-project-primary {
+    background-color: #9624c4;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .is-project-primary:hover {
+    background-color: #712391e1;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 1rem;
+  }
+
   .navbar-brand {
     align-items: center;
   }
@@ -53,12 +68,12 @@
   }
 
   .navbar-dropdown {
-    padding: 15px;
+    padding: 10px;
     font-size: 1rem;
   }
 
   .navbar-dropdown :global(a) {
-    padding: 18px;
+    padding: 6px;
   }
 
   .d-link {
@@ -120,10 +135,10 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <button id="sign-up-button" class="button is-primary">
+          <button id="sign-up-button" class="button is-project-primary">
             <strong>Sign up</strong>
           </button>
-          <button id="login-button" class="button is-dark">Log in</button>
+          <button id="login-button" class="button is-outlined">Log in</button>
         </div>
       </div>
     </div>
