@@ -53,6 +53,10 @@
     color: #fff;
     font-size: 1rem;
   }
+
+  input:focus {
+    outline: 1px solid rgb(167, 167, 167);
+  }
 </style>
 
 <article>

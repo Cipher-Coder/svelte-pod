@@ -10,9 +10,13 @@
     margin-top: -70px;
     margin-right: 45px;
   }
+
+  .card {
+    border-radius: 6px;
+  }
 </style>
 
-<div class="column is-two-thirds s6">
+<div class="column is-three-fifths s6">
   <div class="card">
     <div class="card-content">
       <div class="media">
