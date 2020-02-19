@@ -5,6 +5,7 @@
   "description": "Rankcasts - website to rank your favorite podcasts",
   "scripts": {
     "build": "rollup -c",
+    "dev:network": "HOST=0.0.0.0 PORT=5000 npm run dev",
     "dev": "rollup -c -w",
     "start": "sirv public -s",
     "start:dev": "sirv public --dev -s"
