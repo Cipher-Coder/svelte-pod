@@ -4,8 +4,8 @@
 
   onMount(() => {
     const navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll('.navbar-burger'),
-      0,
+            document.querySelectorAll('.navbar-burger'),
+            0,
     )
 
     if (navbarBurgers.length > 0) {
@@ -97,9 +97,9 @@
       aria-label="menu"
       aria-expanded="false"
       data-target="navbarBasicExample">
-      <span aria-hidden="true" />
-      <span aria-hidden="true" />
-      <span aria-hidden="true" />
+      <span></span>
+      <span></span>
+      <span></span>
     </span>
   </div>
 
@@ -113,7 +113,7 @@
           <Link to="/about">About</Link>
         </li>
         <li class="navbar-item has-dropdown is-hoverable">
-          <Link>Catagories &dtrif;</Link>
+          <Link>Categories &dtrif;</Link>
           <div class="navbar-dropdown">
             <Link to="#">
               <span class="d-link">General</span>
