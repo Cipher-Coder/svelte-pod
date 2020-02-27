@@ -3,20 +3,13 @@
   import { onMount } from 'svelte'
 
   onMount(() => {
-    const navbarBurgers = Array.prototype.slice.call(
-            document.querySelectorAll('.navbar-burger'),
-            0,
-    )
+    const burger = document.querySelector('.burger')
+    const nav = document.querySelector('#' + burger.dataset.target)
 
-    if (navbarBurgers.length > 0) {
-      navbarBurgers.forEach(el => {
-        const target = el.dataset.target
-        const target2 = document.getElementById(target)
-
-        el.classList.toggle('is-active')
-        target2.classList.toggle('is-active')
-      })
-    }
+    burger.addEventListener('click', function() {
+      burger.classList.toggle('is-active')
+      nav.classList.toggle('is-active')
+    })
   })
 </script>
 
@@ -97,9 +90,9 @@
       aria-label="menu"
       aria-expanded="false"
       data-target="navbarBasicExample">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span />
+      <span />
+      <span />
     </span>
   </div>
 
