@@ -59,7 +59,7 @@
   }
 </style>
 
-<article>
+<article class="column">
   <h2 class="submit-title">Search for Podcast</h2>
   <form on:submit|preventDefault={submissionHandler}>
     <label for="name">Search:</label>

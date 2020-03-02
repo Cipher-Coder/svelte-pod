@@ -76,7 +76,7 @@
 <svelte:head>
   <title>Home | RankCasts</title>
 </svelte:head>
-<div class="container">
+<div class="column">
 
   <h1 class="focus-in-expand">Rank The Your Favorite Podcasts:</h1>
   <div class="container">
