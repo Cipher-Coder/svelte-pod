@@ -107,7 +107,7 @@
 
   <h3>
     Your favorite podcast not here? Use the Submit form at the top and see what
-    others think about your favs!!
+    others think about your picks!!
   </h3>
 
 </div>

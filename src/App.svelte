@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte'
   import '../node_modules/bulma/css/bulma.min.css'
   import Sidebar from './components/Sidebar.svelte'
   import Nav from './components/Nav.svelte'
@@ -9,6 +10,20 @@
   import Comedy from './pages/Comedy.svelte'
   import Politics from './pages/Politics.svelte'
 
+  let showNavbar = false
+  const mediaQueryHandler = e => {
+    if (e.matches) {
+      showNavbar = false
+    } else {
+      showNavbar = true
+    }
+  }
+
+  onMount(() => {
+    const mediaListener = window.matchMedia('(min-width: 767px)')
+    mediaListener.addListener(mediaQueryHandler)
+  })
+
   export let url = ''
 </script>
 
@@ -18,7 +33,11 @@
 
 <div class="columns">
   <Router {url}>
-    <Sidebar />
+    {#if showNavbar != false}
+      <Nav />
+    {:else}
+      <Sidebar />
+    {/if}
     <div class="container">
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />

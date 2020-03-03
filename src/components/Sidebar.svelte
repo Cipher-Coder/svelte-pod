@@ -5,6 +5,7 @@
 <style>
   .sidebar {
     margin-top: 25px;
+    margin-right: 5px;
   }
   .menu-label {
     margin-left: 45px;
@@ -54,18 +55,6 @@
         <Link to="/">Developer</Link>
       </li>
     </ul>
-    <p class="menu-label">Transactions</p>
-    <ul class="menu-list">
-      <li>
-        <a>Payments</a>
-      </li>
-      <li>
-        <a>Transfers</a>
-      </li>
-      <li>
-        <a>Balance</a>
-      </li>
-    </ul>
     <p class="menu-label">General</p>
     <ul class="menu-list">
       <li>
@@ -75,7 +64,19 @@
         <Link to="/about">About</Link>
       </li>
       <li>
-        <a>Contact</a>
+        <Link to="/contact">Contact</Link>
+      </li>
+    </ul>
+    <p class="menu-label">Transactions</p>
+    <ul class="menu-list">
+      <li>
+        <Link to="/">Payments</Link>
+      </li>
+      <li>
+        <Link to="/">Transfers</Link>
+      </li>
+      <li>
+        <Link to="/">Balance</Link>
       </li>
     </ul>
   </aside>
