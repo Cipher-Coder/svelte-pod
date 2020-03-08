@@ -57,6 +57,10 @@
   input:focus {
     outline: 1px solid rgb(167, 167, 167);
   }
+
+  ol {
+    list-style-type: square;
+  }
 </style>
 
 <article class="column">
@@ -76,14 +80,14 @@
 
       {:then results}
         <h4>Results:</h4>
-        <ul>
+        <ol>
           {#each searchResult as searchResults}
             <SearchResults
               artist={searchResults.artistName}
               title={searchResults.collectionName}
               feedURL={searchResults.feedUrl} />
           {/each}
-        </ul>
+        </ol>
       {:catch error}
         <p>{error.message}</p>
 

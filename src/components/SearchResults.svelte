@@ -9,7 +9,7 @@
     margin-bottom: 10px;
   }
   .artist-name {
-    color: #919191;
+    color: #5c5b5b;
   }
 
   .podcast-name {
@@ -18,7 +18,7 @@
   }
 
   .feedURL {
-    color: #919191;
+    color: #5c5b5b;
   }
 </style>
 

@@ -6,6 +6,15 @@
     console.log(event.target)
     console.log(event.target.podcastName.value)
     console.log(event.target.podcastUrl.value)
+    // Hide Submit Button After Submission
+    document.getElementById('submitButton').style.display = 'none'
+    // Show thank you after submission
+    let thanks = document.createElement('P')
+    thanks.textContent = 'Thank you for your submission'
+    document.getElementById('submission').appendChild(thanks)
+    // Clear submit inputs
+    event.target.podcastName.value = ''
+    event.target.podcastUrl.value = ''
   }
 
   function validateForm(e) {
@@ -28,8 +37,10 @@
     margin-bottom: 35px;
   }
   .form-error {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: red;
+    margin-bottom: 5px;
+    margin-top: -5px;
   }
 
   .submit-title {
@@ -72,10 +83,11 @@
     <input required type="url" id="podcastUrl" />
     <br />
     {#if error_boolean}
-      <h2 class="form-error">Error!! Check your submission!</h2>
+      <p class="form-error">Format: https://example.com</p>
     {/if}
-
-    <button class="button" type="submit">Submit</button>
+    <div id="submission">
+      <button id="submitButton" class="button" type="submit">Submit</button>
+    </div>
 
   </form>
 
