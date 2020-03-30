@@ -11,17 +11,12 @@
   import Politics from './pages/Politics.svelte'
 
   let showNavbar = false
-  const mediaQueryHandler = e => {
-    if (e.matches) {
-      showNavbar = false
-    } else {
-      showNavbar = true
-    }
-  }
 
   onMount(() => {
-    const mediaListener = window.matchMedia('(min-width: 767px)')
-    mediaListener.addListener(mediaQueryHandler)
+    const mediaListener = window.matchMedia('(max-width: 767px)')
+    mediaListener.addEventListener('change', e => {
+      showNavbar = e.matches
+    })
   })
 
   export let url = ''
