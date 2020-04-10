@@ -64,11 +64,11 @@
   }
 
   input:focus {
-    outline: 1px solid rgb(167, 167, 167);
+    outline: none;
   }
 </style>
 
-<article class="container">
+<article class="column">
   <h2 class="submit-title">Submit An Awesome Podcast!</h2>
   <form
     id="podcast-submission"
@@ -78,9 +78,9 @@
     on:changed={validateForm}
     on:input={validateForm}>
     <label for="podcastName">Podcast Name:</label>
-    <input required type="text" id="podcastName" />
+    <input required type="text" id="podcastName" class="input is-warning" />
     <label for="podcastUrl">Podcast Feed URL</label>
-    <input required type="url" id="podcastUrl" />
+    <input required type="url" id="podcastUrl" class="input is-warning" />
     <br />
     {#if error_boolean}
       <p class="form-error">Format: https://example.com</p>

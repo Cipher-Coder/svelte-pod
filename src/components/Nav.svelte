@@ -90,9 +90,9 @@
       aria-label="menu"
       aria-expanded="false"
       data-target="navbarBasicExample">
-      <span />
-      <span />
-      <span />
+      <span></span>
+      <span></span>
+      <span></span>
     </span>
   </div>
 

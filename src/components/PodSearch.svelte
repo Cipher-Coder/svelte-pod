@@ -55,7 +55,7 @@
   }
 
   input:focus {
-    outline: 1px solid rgb(167, 167, 167);
+    outline: none;
   }
 
   ol {
@@ -66,8 +66,8 @@
 <article class="column">
   <h2 class="submit-title">Search for Podcast</h2>
   <form on:submit|preventDefault={submissionHandler}>
-    <label for="name">Search:</label>
-    <input bind:value={searchParam} id="search" type="text" />
+    <label for="search">Search:</label>
+    <input bind:value={searchParam} id="search" type="text" class="input is-warning" />
     <br />
     <button type="submit" class="button" id="searchbutton">Search</button>
   </form>

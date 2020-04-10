@@ -40,7 +40,7 @@
         height="38"
         alt="RankCasts Logo" />
     </Link>
-    <p class="menu-label">Catagories</p>
+    <p class="menu-label">Categories</p>
     <ul class="menu-list">
       <li>
         <Link to="/">General</Link>
