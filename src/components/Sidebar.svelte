@@ -22,12 +22,30 @@
   }
 
   .menu-list :global(a) {
+    text-decoration: none;
+    display: block;
     color: #9624c4;
   }
 
   .menu-list :global(a:hover) {
     text-decoration: none;
     color: #ccb20c;
+    background-color: #ffffff;
+  }
+
+  .menu-list :global(a:active) {
+    color: #3f3f3f;
+    text-shadow: 2px 2px 8px rgba(195, 0, 255, 0.65);
+  }
+
+  .menu-list :global(a::after) {
+    position: absolute;
+    content: '';
+    width: calc(100% - 1em);
+    height: 2px;
+    background-color: rgb(195, 0, 255);
+    display: block;
+    bottom: -1px;
   }
 
 </style>
@@ -41,6 +59,18 @@
         height="38"
         alt="RankCasts Logo" />
     </Link>
+    <p class="menu-label">General</p>
+    <ul class="menu-list">
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact</Link>
+      </li>
+    </ul>
     <p class="menu-label">Categories</p>
     <ul class="menu-list">
       <li>
@@ -54,18 +84,6 @@
       </li>
       <li>
         <Link to="/">Developer</Link>
-      </li>
-    </ul>
-    <p class="menu-label">General</p>
-    <ul class="menu-list">
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact</Link>
       </li>
     </ul>
     <p class="menu-label">Transactions</p>

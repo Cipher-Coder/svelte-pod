@@ -10,14 +10,6 @@
   import Comedy from './pages/Comedy.svelte'
   import Politics from './pages/Politics.svelte'
 
-  let showNavbar = false
-
-  onMount(() => {
-    const mediaListener = window.matchMedia('(max-width: 767px)')
-    mediaListener.addEventListener('change', e => {
-      showNavbar = e.matches
-    })
-  })
   export let url = ''
 </script>
 
@@ -37,11 +29,8 @@
 
 <div class="columns">
   <Router {url}>
-    {#if showNavbar !== false}
       <Nav />
-    {:else}
       <Sidebar />
-    {/if}
     <div class="container">
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
