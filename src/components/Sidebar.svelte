@@ -29,6 +29,7 @@
     text-decoration: none;
     color: #ccb20c;
   }
+
 </style>
 
 <div class="column sidebar is-1">

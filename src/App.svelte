@@ -18,17 +18,26 @@
       showNavbar = e.matches
     })
   })
-
   export let url = ''
 </script>
 
 <style>
+  @media only screen and (max-width: 768px) {
+    :global(.sidebar) {
+      display: none;
+    }
+  }
 
+  @media only screen and (min-width: 767px) {
+    :global(.navbar) {
+      display: none;
+    }
+  }
 </style>
 
 <div class="columns">
   <Router {url}>
-    {#if showNavbar != false}
+    {#if showNavbar !== false}
       <Nav />
     {:else}
       <Sidebar />
