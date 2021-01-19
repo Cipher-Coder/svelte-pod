@@ -5,14 +5,6 @@
   import SubmitForm from '../components/SubmitForm.svelte'
   import PodSearch from '../components/PodSearch.svelte'
   import AudioPlayer from '../components/AudioPlayer.svelte'
-  import queryString from 'query-string'
-
-  export let location
-
-  let queryParams
-  $: queryParams = queryString.parse(location.search)
-
-  console.log(queryParams)
 
   const URL =
     'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/developer'

@@ -38,7 +38,10 @@
     text-shadow: 2px 2px 8px rgba(195, 0, 255, 0.65);
   }
 
-  .menu-list :global(a::after) {
+  /*
+  TODO:
+  This is causing a purple line accross the middle of the screen.
+    .menu-list :global(a::after) {
     position: absolute;
     content: '';
     width: calc(100% - 1em);
@@ -46,8 +49,7 @@
     background-color: rgb(195, 0, 255);
     display: block;
     bottom: -1px;
-  }
-
+  } */
 </style>
 
 <div class="column sidebar is-1">
@@ -57,7 +59,8 @@
         src="images/newLogoSideWays.png"
         width="142"
         height="38"
-        alt="RankCasts Logo" />
+        alt="RankCasts Logo"
+      />
     </Link>
     <p class="menu-label">General</p>
     <ul class="menu-list">
@@ -99,5 +102,4 @@
       </li>
     </ul>
   </aside>
-
 </div>

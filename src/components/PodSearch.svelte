@@ -45,6 +45,7 @@
     color: #fff;
     font-size: 1rem;
     font-weight: normal;
+    margin-top: 10px;
   }
 
   button:hover {
@@ -67,7 +68,12 @@
   <h2 class="submit-title">Search for Podcast</h2>
   <form on:submit|preventDefault={submissionHandler}>
     <label for="search">Search:</label>
-    <input bind:value={searchParam} id="search" type="text" class="input is-warning" />
+    <input
+      bind:value={searchParam}
+      id="search"
+      type="text"
+      class="input is-warning"
+    />
     <br />
     <button type="submit" class="button" id="searchbutton">Search</button>
   </form>
@@ -77,7 +83,6 @@
     {:else}
       {#await result}
         <p>Loading...</p>
-
       {:then results}
         <h4>Results:</h4>
         <ol>
@@ -85,15 +90,13 @@
             <SearchResults
               artist={searchResults.artistName}
               title={searchResults.collectionName}
-              feedURL={searchResults.feedUrl} />
+              feedURL={searchResults.feedUrl}
+            />
           {/each}
         </ol>
       {:catch error}
         <p>{error.message}</p>
-
       {/await}
     {/if}
-
   </div>
-
 </article>

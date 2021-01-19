@@ -54,6 +54,7 @@
     color: #fff;
     font-size: 1rem;
     font-weight: normal;
+    margin-top: 10px;
   }
 
   button:hover {
@@ -76,7 +77,8 @@
     on:submit|preventDefault={handleSubmit}
     on:invalid={validateForm}
     on:changed={validateForm}
-    on:input={validateForm}>
+    on:input={validateForm}
+  >
     <label for="podcastName">Podcast Name:</label>
     <input required type="text" id="podcastName" class="input is-warning" />
     <label for="podcastUrl">Podcast Feed URL</label>
@@ -88,7 +90,5 @@
     <div id="submission">
       <button id="submitButton" class="button" type="submit">Submit</button>
     </div>
-
   </form>
-
 </article>
