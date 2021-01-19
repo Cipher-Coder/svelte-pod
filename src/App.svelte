@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from 'svelte'
   import '../node_modules/bulma/css/bulma.min.css'
   import Sidebar from './components/Sidebar.svelte'
   import Nav from './components/Nav.svelte'
@@ -29,8 +28,8 @@
 
 <div class="columns">
   <Router {url}>
-      <Nav />
-      <Sidebar />
+    <!-- <Nav /> -->
+    <Sidebar />
     <div class="container">
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
@@ -39,7 +38,6 @@
     </div>
   </Router>
   <slot />
-
 </div>
 
 <Footer />

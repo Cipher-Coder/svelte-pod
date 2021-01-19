@@ -10,7 +10,7 @@
     'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/politics'
   let posts = []
 
-  onMount(async function() {
+  onMount(async function () {
     const res = await fetch(URL)
     const json = await res.json()
     posts = json['politics']
@@ -78,7 +78,6 @@
 </svelte:head>
 
 <div class="container">
-
   <h1 class="focus-in-expand">Rank The Best Political Podcasts:</h1>
   <div class="container">
     <div class="column is-one-third is-right">
@@ -103,12 +102,10 @@
         Sorry... No Podcasts to display! Please add one with the Submit form!
       </p>
     {/each}
-
   </div>
 
   <h3>
     Your favorite podcast not here? Use the Submit form at the top and see what
     others think about your favs!!
   </h3>
-
 </div>

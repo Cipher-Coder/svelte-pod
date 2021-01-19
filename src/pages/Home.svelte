@@ -5,12 +5,20 @@
   import SubmitForm from '../components/SubmitForm.svelte'
   import PodSearch from '../components/PodSearch.svelte'
   import AudioPlayer from '../components/AudioPlayer.svelte'
+  import queryString from 'query-string'
+
+  export let location
+
+  let queryParams
+  $: queryParams = queryString.parse(location.search)
+
+  console.log(queryParams)
 
   const URL =
     'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/developer'
   let posts = []
 
-  onMount(async function() {
+  onMount(async function () {
     const res = await fetch(URL)
     const json = await res.json()
     posts = json['developer']
@@ -77,7 +85,6 @@
   <title>Home | RankCasts</title>
 </svelte:head>
 <div class="column">
-
   <h1 class="focus-in-expand">Rank The Your Favorite Podcasts:</h1>
   <div class="container">
     <div class="column is-one-third is-right">
@@ -102,12 +109,10 @@
         Sorry... No Podcasts to display! Please add one with the Submit form!
       </p>
     {/each}
-
   </div>
 
   <h3>
     Your favorite podcast not here? Use the Submit form at the top and see what
     others think about your picks!!
   </h3>
-
 </div>

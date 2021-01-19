@@ -102,14 +102,13 @@
         <img
           class="devtabs-img column"
           src="images/devtabs.png"
-          alt="Screenshot of Dev Tabs" />
+          alt="Screenshot of Dev Tabs"
+        />
         <figcaption class="caption">
           <a
             href="https://mattaz.com/devtabs"
             target="_blank"
-            rel="noopener noreferrer">
-            Dev Tabs Browser Extension
-          </a>
+            rel="noopener noreferrer"> Dev Tabs Browser Extension </a>
         </figcaption>
       </figure>
     </div>
@@ -117,5 +116,4 @@
   <div class="addedPic">
     <Image {...myImage} />
   </div>
-
 </div>
